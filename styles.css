@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  width: 350px;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.connection-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.connection-status.error {
+  color: #ff4d4d;
+}
+
+.environment-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.search-section, .solution-section, .web-resource-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+
+.search-box, .dropdown {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.search-box:focus, .dropdown:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+h2 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  color: #007bff;
+}
+
+.primary-button {
+  padding: 12px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.primary-button:hover {
+  background-color: #0056b3;
+}
+
+.primary-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}

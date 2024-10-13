@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Resource Editor</title>
+  <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+  <div class="header">
+    <h1 id="resourceName">Editing: </h1>
+    <div class="buttons">
+      <button id="saveButton">
+        <span class="buttonText">Save</span>
+        <span class="spinner" id="saveSpinner" style="display: none;"></span>
+      </button>
+      <button id="publishButton">
+        <span class="buttonText">Publish</span>
+        <span class="spinner" id="publishSpinner" style="display: none;"></span>
+      </button>
+      <button id="reloadButton">Reload</button>
+    </div>
+  </div>
+  <!-- Notification Banner -->
+  <div id="notificationBanner" class="notification" style="display: none;"></div>
+  <!-- Toast Container -->
+  <div id="toastContainer"></div>
+  
+  <!-- CodeMirror Editor Container -->
+  <div id="codeEditor"></div>
+
+  <!-- Include the bundled script -->
+  <script type="module" src="dist/editor.js"></script>
+</body>
+</html>

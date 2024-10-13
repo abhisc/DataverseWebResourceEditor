@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dataverse WebResource Editor</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="popup-container">
+
+
+    <!-- Environment Information Section -->
+    <h1 id="environmentName" class="environment-title">Loading Environment...</h1>
+
+    <!-- Search Solutions Section -->
+    <div class="search-section">
+      <label for="searchBox" class="input-label">Search Solutions:</label>
+      <input type="text" id="searchBox" placeholder="Search Solutions" class="search-box">
+    </div>
+
+    <!-- Solution Dropdown Section -->
+    <div class="solution-section">
+      <label for="solutionsDropdown" class="input-label">Select a Solution:</label>
+      <select id="solutionsDropdown" class="dropdown">
+        <option value="">Select a Solution</option>
+      </select>
+    </div>
+
+    <!-- Web Resources Section -->
+    <div class="web-resource-section">
+      <label for="webResourcesDropdown" class="input-label">Select a Web Resource:</label>
+      <select id="webResourcesDropdown" class="dropdown">
+        <option value="">Select a Web Resource</option>
+      </select>
+    </div>
+
+    <!-- Open Editor Button -->
+    <button id="openEditorButton" class="primary-button" disabled>
+      <i class="fas fa-edit"></i> Open in Editor
+    </button>
+  </div>
+
+  <script src="src/popup.js"></script>
+</body>
+</html>
