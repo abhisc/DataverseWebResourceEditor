@@ -1,2 +1,0 @@
-chrome.runtime.onMessage.addListener((function(e,r,o){if("openEditor"===e.action)chrome.storage.local.set({resourceDetails:{resource:e.resource,environmentUrl:e.environmentUrl}},(function(){chrome.tabs.create({url:chrome.runtime.getURL("editor.html")})}));else if("getResourceDetails"===e.action)return chrome.storage.local.get("resourceDetails",(function(e){o(e.resourceDetails)})),!0}));
-//# sourceMappingURL=background.js.map
