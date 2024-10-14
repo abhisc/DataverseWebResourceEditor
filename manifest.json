@@ -30,5 +30,5 @@
     "resources": [ "editor.html", "dist/editor.js", "editor.css" ],
     "matches": ["<all_urls>"]
   }]
-}//test
+}
 

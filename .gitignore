@@ -2,6 +2,8 @@
 node_modules/
 npm-debug.log
 yarn-error.log
+yarn-debug.log
+.pnpm-debug.log
 
 # Build output
 dist/
@@ -17,14 +19,46 @@ build/
 .idea/
 *.swp
 *.swo
+*.sublime-workspace
+*.sublime-project
 
 # OS generated files
 .DS_Store
 Thumbs.db
+.directory
+Desktop.ini
 
 # Logs
 *.log
+logs/
 
 # Temporary files
 *.tmp
 *.temp
+.cache/
+
+# Chrome Extension specific
+*.pem
+*.crx
+
+# Testing
+coverage/
+
+# Miscellaneous
+*.bak
+*.backup
+*.old
+.tmp*
+*.zip
+
+# Webpack
+.webpack/
+
+# Optional: Uncomment if you're using TypeScript
+# *.tsbuildinfo
+
+# Optional: Uncomment if you're using ESLint
+# .eslintcache
+
+# Optional: Uncomment if you're using Prettier
+# .prettierignore

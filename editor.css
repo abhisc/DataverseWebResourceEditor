@@ -74,10 +74,27 @@ button:disabled {
   flex: 1;
   border-top: 1px solid #ccc;
   margin: 20px;
-  height: calc(100% - 120px);
-  min-height: 400px; /* Ensure it has a visible height */
+  height: calc(100vh - 150px); /* Adjust based on your layout */
+  min-height: 400px;
+  overflow: auto;
 }
 
+/* Ensure CodeMirror takes full height of its container */
+.cm-editor {
+  height: 100%;
+}
+
+/* Ensure syntax highlighting is visible */
+.cm-content {
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Style for syntax highlighting */
+.cm-line {
+  padding: 0 4px;
+}
 
 /* Notification banner styling */
 .notification {

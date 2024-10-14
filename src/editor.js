@@ -1,6 +1,5 @@
 // Import CodeMirror modules
-import { EditorState } from '@codemirror/state';
-import { EditorView, basicSetup } from '@codemirror/basic-setup';
+import { EditorView, basicSetup } from 'codemirror';
 import { javascript } from '@codemirror/lang-javascript';
 import { html } from '@codemirror/lang-html';
 import { css } from '@codemirror/lang-css';
@@ -38,43 +37,48 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   function initializeEditor(resource) {
+    console.log('Initializing editor for resource:', resource.name);
 
     const decodedContent = atob(resource.content || '');
-  
+
     let languageExtension;
     switch (resource.webresourcetype) {
       case 1:
-        languageExtension = html(); // HTML
+        languageExtension = html();
+        console.log('Setting language extension to HTML');
         break;
       case 2:
-        languageExtension = css(); // CSS
+        languageExtension = css();
+        console.log('Setting language extension to CSS');
         break;
       case 3:
-        languageExtension = javascript(); // JavaScript
+        languageExtension = javascript();
+        console.log('Setting language extension to JavaScript');
         break;
       default:
-        languageExtension = javascript(); // Default to JavaScript for unknown types
-        console.warn('Unknown web resource type, defaulting to JavaScript');
+        console.warn('Unknown web resource type:', resource.webresourcetype, 'defaulting to JavaScript');
+        languageExtension = javascript();
         break;
     }
 
     const editorParent = document.getElementById('codeEditor');
+    if (!editorParent) {
+      console.error('Editor parent element not found');
+      return;
+    }
 
-  // Initialize the CodeMirror editor with syntax highlighting
-  const state = EditorState.create({
-    doc: decodedContent,
-    extensions: [
-      basicSetup,
-      languageExtension,
-      oneDark, // Apply One Dark theme
-    ].filter(Boolean),
-  });
-
-  editorView = new EditorView({
-    state,
-    parent: editorParent,
-  });
-}
+    try {
+      editorView = new EditorView({
+        doc: decodedContent,
+        extensions: [basicSetup, languageExtension, oneDark],
+        parent: editorParent,
+      });
+      console.log('CodeMirror editor initialized successfully. Editor view:', editorView);
+    } catch (error) {
+      console.error('Error initializing CodeMirror editor:', error);
+      console.error('Error stack:', error.stack);
+    }
+  }
 
   function showToast(message) {
     const toastContainer = document.getElementById('toastContainer');
