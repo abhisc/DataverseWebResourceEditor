@@ -1,4 +1,4 @@
-# Dynamics 365 Web Resource Editor - Chrome Extension
+# Dataverse Web Resource Editor - Chrome Extension
 
 This Chrome extension provides a quick and efficient way to manage and edit JavaScript web resources in Dynamics 365. The extension allows users to view, edit, and publish web resources directly from their browser without navigating through multiple screens in the Dynamics 365 interface.
 
