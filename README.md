@@ -40,7 +40,7 @@ This Chrome extension provides a quick and efficient way to manage and edit Web 
 
 Main Screen
 
-![alt text](./images/mainscreen.png)
+![alt text](./images/MainScreen.png)
 
 Web Resource Editor
 
