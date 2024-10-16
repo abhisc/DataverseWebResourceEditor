@@ -1,38 +1,52 @@
 # Dataverse Web Resource Editor - Chrome Extension
 
-This Chrome extension provides a quick and efficient way to manage and edit JavaScript web resources in Dynamics 365. The extension allows users to view, edit, and publish web resources directly from their browser without navigating through multiple screens in the Dynamics 365 interface.
+This Chrome extension provides a quick and efficient way to manage and edit Web resources in Dataverse. The extension allows users to view, edit, and publish web resources directly from their browser without navigating through multiple screens in the Dynamics 365 interface.
 
 ## Features
 
-- **List Web Resources**: When a form is opened in Dynamics 365, the extension lists all JavaScript web resources associated with that form.
-- **Quick Overview**: See a summary of all JavaScript functions, along with the events they are registered on.
-- **Inline Editing**: Directly edit the content of a web resource (JavaScript or HTML) within the extension.
+- **List Web Resources**: Lists all web resources associated with a solution.
+- **Inline Editing**: Directly edit the content of a web resource (Example: JavaScript or HTML) within the extension.
 - **Save and Publish**: Save changes to the web resource and publish them instantly without having to open the full Dynamics 365 interface.
 - **Solution-Based Management**: Browse and edit web resources across multiple solutions in Dynamics 365.
 - **Search Functionality**: Quickly find web resources across different solutions by name or part of the script content.
 
 ## How to Install
 
-1. Clone or download the repository.
-2. Open Chrome and navigate to `chrome://extensions/`.
-3. Enable **Developer mode** using the toggle in the upper-right corner.
-4. Click **Load unpacked** and select the folder where the extension is located.
-5. The extension will now be installed and visible in your Chrome toolbar.
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/dataverse-web-resource-editor.git
+   cd dataverse-web-resource-editor
+   ```
+2. Install dependencies and build the project:
+   ```sh
+   npm install
+   npm run build
+   ```
+3. Open Chrome and navigate to `chrome://extensions/`.
+4. Enable **Developer mode** using the toggle in the upper-right corner.
+5. Click **Load unpacked** and select the folder where the extension is located.
+6. The extension will now be installed and visible in your Chrome toolbar.
 
 ## How to Use
 
-1. Open any Dynamics 365 form in your browser.
-2. Click the Dynamics 365 Web Resource Editor icon in your Chrome toolbar.
-3. The extension will list all web resources related to the form.
-4. Click on any web resource to view a quick summary of the functions and events it’s registered on.
-5. Select **Edit** to open the editor and modify the content of the web resource.
-6. After making changes, click **Save** and **Publish** to apply the updates directly to Dynamics 365.
+1. Open your Dynamics 365 CRM in the browser.
+2. Click the Dataverse Web Resource Editor icon in the Chrome toolbar.
+3. The extension will display a list of all available solutions. Use the search functionality to find the desired solution and click on it.
+4. Select the web resource you wish to edit.
+5. Click **Open in Editor** to open the editor and modify the content of the web resource.
+6. Once you have made your changes, click **Save** and then **Publish** to apply the updates directly to Dynamics 365.
 
 ## Screenshots
 
-<!-- Add screenshots of the extension in action here -->
+Main Screen
 
-## Known Issues
+![alt text](./images/mainscreen.png)
+
+Web Resource Editor
+
+![alt text](./images/Editorscreen.png)
+
+## Notes
 
 - The extension requires the correct permissions to interact with Dynamics 365 environments. Ensure that your browser session has proper access to the Dynamics 365 instance.
 - Large web resources might take a few seconds to load in the editor.
@@ -42,6 +56,7 @@ This Chrome extension provides a quick and efficient way to manage and edit Java
 - **Version Control Integration**: Add support for GitHub or other version control systems to track changes to web resources.
 - **Support for Other Resource Types**: Extend functionality to handle images, XML, and other resource types.
 - **Offline Editing**: Allow users to edit resources offline and sync changes once back online.
+- **Save and load from Local Copy**: Save the web resource to a local copy and load it back into the editor.
 
 ## Contributing
 
