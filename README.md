@@ -12,16 +12,7 @@ This Chrome extension provides a quick and efficient way to manage and edit Web 
 
 ## How to Install
 
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/yourusername/dataverse-web-resource-editor.git
-   cd dataverse-web-resource-editor
-   ```
-2. Install dependencies and build the project:
-   ```sh
-   npm install
-   npm run build
-   ```
+1. Download the latest release Zip file
 3. Open Chrome and navigate to `chrome://extensions/`.
 4. Enable **Developer mode** using the toggle in the upper-right corner.
 5. Click **Load unpacked** and select the folder where the extension is located.
